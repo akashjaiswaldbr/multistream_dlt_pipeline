@@ -1,0 +1,52 @@
+
+{
+    "id": "<<Auto generated ID>>",
+    "clusters": [
+        {
+            "label": "default",
+            "aws_attributes": {
+                "instance_profile_arn": "<<AWS IAM Role>>"
+            },
+            "autoscale": {
+                "min_workers": 1,
+                "max_workers": 5,
+                "mode": "ENHANCED"
+            }
+        }
+    ],
+    "development": true,
+    "continuous": true,
+    "channel": "CURRENT",
+    "edition": "ADVANCED",
+    "photon": false,
+    "libraries": [
+        {
+            "notebook": {
+                "path": "/path/to/my/notebook/dlt_jobs/dlt_kinesis_consumer_vaccination"
+            }
+        },
+        {
+            "notebook": {
+                "path": "/path/to/my/notebook/dlt_jobs/dlt_eventhubs_consumer_testing_records"
+            }
+        },
+        {
+            "notebook": {
+                "path": "/path/to/my/notebook/dlt_jobs/dlt_msk_consumer_admissions"
+            }
+        },
+        {
+            "notebook": {
+                "path": "/path/to/my/notebook/dlt_jobs/dlt_autoloader_consumer_claims"
+            }
+        },
+        {
+            "notebook": {
+                "path": "/path/to/my/notebook/dlt_jobs/dlt_patient_agg_data"
+            }
+        }
+    ],
+    "name": "dlt_multistream_consumer",
+    "storage": "<< S3 folder full path>>",
+    "target": "<< Database name>>"
+}
